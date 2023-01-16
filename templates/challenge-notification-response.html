@@ -1,0 +1,11 @@
+<p>Challenge finished - posting message to parent window...</p>
+<script type="text/javascript">
+    console.log("Challenge Notification received, sending message to parent window");
+
+    const data = {
+        challengeCompleted: true,
+        status: "{{.}}"
+    };
+
+    window.parent.postMessage(data, "*");
+</script>

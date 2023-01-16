@@ -1,0 +1,11 @@
+<p>Method fingerprinting finished - posting message to parent window...</p>
+<script type="text/javascript">
+    console.log("Method Notification received, sending message to parent window");
+
+    const data = {
+        methodCompleted: true,
+        threeDSServerTransID: "{{.}}"
+    };
+
+    window.parent.postMessage(data, "*");
+</script>
